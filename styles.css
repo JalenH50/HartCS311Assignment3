@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #00000077;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    gap: 8px;
+    position: relative; /* Position the status element relative to this container */
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9d94c4;
+    border: 2px solid #ffffff;
+    font-size: 32px;
+    color: #000000;
+    cursor: pointer; /* Add cursor pointer for better UX */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color */
+}
+
+.card.flipped {
+    background-color: #ffffff; /* Change background color for flipped cards */
+    color: #000000;
+}
+
+.card.matched {
+    background-color: #60c438; /* Change background color for matched cards */
+    color: #ffffff;
+}
+
+.status {
+    position: absolute; /* Position the status absolutely */
+    top: 10px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
